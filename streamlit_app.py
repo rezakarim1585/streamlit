@@ -1,12 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[1]:
 
 
 import streamlit as st
 import pandas as pd
-#from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 from xgboost import XGBRegressor
 import numpy as np
@@ -87,14 +83,14 @@ import math
 
 #app = Flask(__name__,static_url_path = "/tmp", static_folder = "tmp")
 #rf_model = pickle.load(open('fprc_r_rf.pkl', 'rb'))
-ab_model = pickle.load(open('fprc_r_ab.pkl', 'rb'))
-ann_model = pickle.load(open('fprc_r_ann.pkl','rb'))
+ab_model = pickle.load(open('ab_model.pkl', 'rb'))
+#ann_model = pickle.load(open('fprc_r_ann.pkl','rb'))
 #cb_model = pickle.load(open('fprc_r_cb.pkl','rb'))
-dt_model = pickle.load(open('fprc_r_dt.pkl','rb'))
+#dt_model = pickle.load(open('fprc_r_dt.pkl','rb'))
 #knn_model = pickle.load(open('knn_model.pkl','rb'))
-lasso_model = pickle.load(open('fprc_r_lasso.pkl','rb'))
-lr_model = pickle.load(open('fprc_r_lr.pkl','rb'))
-ridge_model = pickle.load(open('fprc_r_rr.pkl','rb'))
+#lasso_model = pickle.load(open('fprc_r_lasso.pkl','rb'))
+#lr_model = pickle.load(open('fprc_r_lr.pkl','rb'))
+#ridge_model = pickle.load(open('fprc_r_rr.pkl','rb'))
 svr_model = pickle.load(open('svr_model.pkl','rb'))
 #xg_model = pickle.load(open('fprc_r_xb.pkl','rb'))
 
@@ -127,14 +123,14 @@ prediction3 = svr_model.predict(df1)
 prediction4 = ab_model.predict(df1)
 #prediction4=math.exp(prediction4[0])
 
-prediction5 = ridge_model.predict(df1)
+#prediction5 = ridge_model.predict(df1)
 #prediction5=math.exp(prediction5[0])
 
-prediction6 = dt_model.predict(df1)
+#prediction6 = dt_model.predict(df1)
 #prediction6=math.exp(prediction6[0])
 
 st.header('Prediction of Vexp')
-st.write(prediction,prediction2, prediction3,prediction4, prediction5,prediction6)
+st.write(prediction,prediction2, prediction3,prediction4)
 
 st.write('---')
 
