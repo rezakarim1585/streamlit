@@ -1,11 +1,11 @@
 
 import streamlit as st
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
-from xgboost import XGBRegressor
+#from sklearn.ensemble import RandomForestRegressor
+#from xgboost import XGBRegressor
 import numpy as np
 import math
-from sklearn.neighbors import KNeighborsRegressor
+#from sklearn.neighbors import KNeighborsRegressor
 
 
 st.set_page_config(layout="wide", page_title=None, page_icon=":house:")
@@ -84,15 +84,15 @@ ab_model = pickle.load(open('ab_model.pkl', 'rb'))
 svr_model = pickle.load(open('svr_model.pkl','rb'))
 
 
-rf_model = RandomForestRegressor()
-rf_model.fit(X1, Y)
+#rf_model = RandomForestRegressor()
+#rf_model.fit(X1, Y)
 # Apply Model to Make Prediction
-xb_model = XGBRegressor()
-xb_model.fit(X1, Y)
+#xb_model = XGBRegressor()
+#xb_model.fit(X1, Y)
 
-prediction = rf_model.predict(df1)
+#prediction = rf_model.predict(df1)
 
-prediction2 = xb_model.predict(df1)
+#prediction2 = xb_model.predict(df1)
 
 prediction3 = svr_model.predict(df1)
 
@@ -101,7 +101,7 @@ prediction4 = ab_model.predict(df1)
 
 
 st.header('Prediction of Vexp')
-st.write(prediction,prediction2, prediction3,prediction4)
+st.write(prediction3,prediction4)
 
 st.write('---')
 
