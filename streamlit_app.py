@@ -5,7 +5,6 @@ import pandas as pd
 #from xgboost import XGBRegressor
 import numpy as np
 import math
-import pickel as pkl
 #from sklearn.neighbors import KNeighborsRegressor
 
 
@@ -76,7 +75,6 @@ Y=df['Vexp']
 
 
 import pickle
-from numpy import inf
 import math
 
 
