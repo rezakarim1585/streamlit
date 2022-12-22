@@ -37,7 +37,7 @@ def user_input_features():
     ad= st.sidebar.slider('Shear span-to-depth ratio, **a/d**', float(X.a_d.min()), float(X.a_d.max()), float(X.a_d.mean()))                   
     data = {'bw(mm)': bw,
             'd (mm)': d,
-            st.latex(r''' e^{i\pi} + 1 = 0 '''): fc,
+            'fc(MPa)': fc,
             'a/d': ad,
             'ρf':pf,
             'Ef (GPA)':Ef
