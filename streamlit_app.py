@@ -78,9 +78,9 @@ import pickle
 import math
 
 
-ab_model = pickle.load(open('ab_model.pkl', 'rb'))
+rf_model1 = pickle.load(open('rf_model.pkl', 'rb'))
 
-svr_model = pickle.load(open('svr_model.pkl','rb'))
+xb_model1 = pickle.load(open('xb_model.pkl','rb'))
 
 
 rf_model = RandomForestRegressor()
@@ -93,10 +93,10 @@ prediction = rf_model.predict(df1)
 
 prediction2 = xb_model.predict(df1)
 
-prediction3 = svr_model.predict(df1)
+prediction3 = rf_model1.predict(df1)
 
 
-prediction4 = ab_model.predict(df1)
+prediction4 = xb_model1.predict(df1)
 
 
 st.header('Prediction of Vexp')
