@@ -41,7 +41,7 @@ def user_input_features():
             'Ef (GPA)':Ef
            }
     df2 = pd.DataFrame(data, index=[0])
-    st.write(df2)
+    st.table(df2)
     
     data_log = {'bw': np.log(bw),
             'd': np.log(d),
