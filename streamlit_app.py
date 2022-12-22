@@ -116,20 +116,42 @@ p_ann = ann_model.predict(df1)
 
 st.header('Prediction of Vexp')
 
-pred = {'Multilinear Regression (LR)': p_lr,
-            'Ridge Regression (RR)': p_rr,
-            "Lasso Regression (LaR)": p_lasr,
-            'Support Vector Regression (SVR)': p_svr,
-            'Decision Tree (DT)':p_dt,
-            'Random Forest (RF)':p_rf,
-            'K-Nearest Neighbour (KNN)': p_knn,
-            "Arti-Neural Network (ANN)": p_ann,
-            'Adaboost (AB)': p_ab,
-            'Extreme Grad- Boost (XB)':p_xb
-           }
+
+
+pred = { 'ML Algorithm': ['Multilinear Regression (LR)','Ridge Regression (RR)',"Lasso Regression (LaR)",'Support Vector Regression (SVR)',
+                          'Decision Tree (DT)','Random Forest (RF)','K-Nearest Neighbour (KNN)',"Arti-Neural Network (ANN)",
+                          'Adaboost (AB)','Extreme Grad- Boost (XB)'],
+         'Predicted Shear Strength (KN)': [p_lr, p_rr, p_lasr, p_svr,p_dt,p_rf, p_knn,p_ann, p_ab,p_xb]
+ 
 df_pred = pd.DataFrame(pred, index=[0])
  
 st.table(df_pred)
+
+plt.rcParams["figure.figsize"] = [7, 4]
+    
+fig, ax = plt.subplots()
+
+ml = df_pred['ML Algorithm']
+ss = df4['Predicted Shear Strength (KN)']
+#bar_labels = ['red', 'blue', '_red', 'orange']
+bar_colors = ['tab:red', 'tab:blue', 'tab:pink', 'tab:orange', 'tab:green', 'tab:grey', 'tab:purple', 'tab:cyan']
+
+ax.bar(ml, ss, label= None, color= bar_colors)
+
+ax.set_ylabel('Predicted Shear Strength (KN)')
+ax.set_xlabel('ML Algorithm')
+ax.set_title('Shear Strength Prediction of FRP Reinforced Slender Concrete Beam using ML')
+ax.legend(title=None)
+    
+    #plt.xlim(-10, 10)
+plt.ylim(0, 300)
+plt.show()
+st.pyplot(fig)
+
+
+
+
+
 st.bar_chart(data=df_pred, x=None, y=None, width=0, height=0, use_container_width=True)
 #st.write(p_lr,p_rr,p_lasr,p_svr,p_dt,p_rf,p_xb,p_ab,p_knn,p_ann)
 st.write('---')
