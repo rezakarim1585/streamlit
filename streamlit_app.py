@@ -95,17 +95,17 @@ ann_model = pickle.load(open('ann_model.pkl','rb'))
 p_lr = float(lr_model.predict(df1))
 p_rr = float(rr_model.predict(df1))
 
-p_lasr = lasr_model.predict(df1)
-p_svr = svr_model.predict(df1)
+p_lasr = float(lasr_model.predict(df1))
+p_svr = float(svr_model.predict(df1))
 
-p_dt = dt_model.predict(df1)
-p_rf = rf_model.predict(df1)
+p_dt = float(dt_model.predict(df1))
+p_rf = float(rf_model.predict(df1))
 
-p_xb = xb_model.predict(df1)
-p_ab= ab_model.predict(df1)
+p_xb = float(xb_model.predict(df1))
+p_ab= float(ab_model.predict(df1))
 
-p_knn = knn_model.predict(df1)
-p_ann = ann_model.predict(df1)
+p_knn = float(knn_model.predict(df1))
+p_ann = float(ann_model.predict(df1))
 
 #####
 
