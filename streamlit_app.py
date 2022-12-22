@@ -107,8 +107,11 @@ p_ab= ab_model.predict(df1)
 p_knn = knn_model.predict(df1)
 p_ann = ann_model.predict(df1)
 
+#####
 
+p_lr = float(p_lr)
 
+######
 
 st.header('Prediction of Vexp')
 
