@@ -100,7 +100,7 @@ prediction4 = ab_model.predict(df1)
 
 
 st.header('Prediction of Vexp')
-st.write(prediction1,prediction2)
+st.write(prediction,prediction2)
 st.write(prediction3,prediction4)
 st.write('---')
 
