@@ -130,7 +130,7 @@ pred = {'Multilinear Regression (LR)': p_lr,
 df_pred = pd.DataFrame(pred, index=[0])
  
 st.table(df_pred)
-
+st.bar_chart(data=df_pred, x=None, y=None, width=0, height=0, use_container_width=True)
 #st.write(p_lr,p_rr,p_lasr,p_svr,p_dt,p_rf,p_xb,p_ab,p_knn,p_ann)
 st.write('---')
 
