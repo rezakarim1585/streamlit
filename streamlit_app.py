@@ -84,11 +84,11 @@ rf_model1 = pickle.load(open('rf_model.pkl', 'rb'))
 xb_model1 = pickle.load(open('xb_model.pkl','rb'))
 
 
-#rf_model = RandomForestRegressor()
-#rf_model.fit(X1, Y)
+rf_model = RandomForestRegressor()
+rf_model.fit(X1, Y)
 # Apply Model to Make Prediction
-#xb_model = XGBRegressor()
-#xb_model.fit(X1, Y)
+xb_model = XGBRegressor()
+xb_model.fit(X1, Y)
 
 prediction = rf_model.predict(df1)
 
@@ -101,7 +101,7 @@ prediction4 = xb_model1.predict(df1)
 
 
 st.header('Prediction of Vexp')
-#st.write(prediction,prediction2)
+st.write(prediction,prediction2)
 st.write(prediction3,prediction4)
 st.write('---')
 
