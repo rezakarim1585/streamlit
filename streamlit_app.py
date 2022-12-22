@@ -57,7 +57,7 @@ def user_input_features():
     features = pd.DataFrame(data_log, index=[0])
     return features
 
-col1,col2=st.columns(1,1)
+col1,col2=st.columns([1,1])
 with col1:
    df1 = user_input_features()
 with col2: 
