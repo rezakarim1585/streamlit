@@ -27,12 +27,12 @@ X = df.loc[:, df.columns != 'Vexp']
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    bw = st.sidebar.slider('Width of the beam,**bw(mm)**', float(X.bw.min()), float(X.bw.max()), float(X.bw.mean()))
-    d = st.sidebar.slider('Effective depth of the beam**d (mm**)', float(X.d.min()), float(X.d.max()), float(X.d.mean()))
-    fc = st.sidebar.slider("Compressive strength of concrete**fc'(MPa)**", float(X.fc.min()), float(X.fc.max()), float(X.fc.mean()))
-    pf = st.sidebar.slider('Reinforcement ratio**ρ**', float(X.pf.min()), float(X.pf.max()), float(X.pf.mean()))
-    Ef= st.sidebar.slider('Modulas of Elasticity of Rebar**Ef (GPA)**', float(X.Ef.min()), float(X.Ef.max()), float(X.Ef.mean()))
-    ad= st.sidebar.slider('shear span-to-depth ratio**a/d**', float(X.a_d.min()), float(X.a_d.max()), float(X.a_d.mean()))                   
+    bw = st.sidebar.slider('Width of the beam, **bw(mm)**', float(X.bw.min()), float(X.bw.max()), float(X.bw.mean()))
+    d = st.sidebar.slider('Effective depth of the beam, **d (mm**)', float(X.d.min()), float(X.d.max()), float(X.d.mean()))
+    fc = st.sidebar.slider("Compressive strength of concrete, **fc'(MPa)**", float(X.fc.min()), float(X.fc.max()), float(X.fc.mean()))
+    pf = st.sidebar.slider('Reinforcement ratio, **ρ**', float(X.pf.min()), float(X.pf.max()), float(X.pf.mean()))
+    Ef= st.sidebar.slider('Modulas of Elasticity of Rebar, **Ef (GPA)**', float(X.Ef.min()), float(X.Ef.max()), float(X.Ef.mean()))
+    ad= st.sidebar.slider('Shear span-to-depth ratio, **a/d**', float(X.a_d.min()), float(X.a_d.max()), float(X.a_d.mean()))                   
     data = {'bw(mm)': bw,
             'd (mm)': d,
             "fc' (MPa)": fc,
