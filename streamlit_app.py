@@ -116,7 +116,22 @@ p_ann = ann_model.predict(df1)
 
 st.header('Prediction of Vexp')
 
-st.write(p_lr,p_rr,p_lasr,p_svr,p_dt,p_rf,p_xb,p_ab,p_knn,p_ann)
+pred = {'Multilinear Regression (LR)': p_lr,
+            'Ridge Regression (RR)': p_rr,
+            "Lasso Regression (LaR)": p_lasr,
+            'Support Vector Regression (SVR)': p_svr,
+            'Decision Tree (DT)':p_dt,
+            'Random Forest (RF)':p_rf,
+            'K-Nearest Neighbour (KNN)': p_knn,
+            "Arti-Neural Network (ANN)": p_ann,
+            'Adaboost (AB)': p_ab,
+            'Extreme Grad- Boost (XB)':p_xb
+           }
+df_pred = pd.DataFrame(pred, index=[0])
+ 
+st.table(df_pred)
+
+#st.write(p_lr,p_rr,p_lasr,p_svr,p_dt,p_rf,p_xb,p_ab,p_knn,p_ann)
 st.write('---')
 
 
