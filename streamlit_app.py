@@ -10,7 +10,7 @@ from PIL import Image
 #from sklearn.neighbors import KNeighborsRegressor
 
 
-st.set_page_config(layout="wide", page_title=None, page_icon=":house:")
+st.set_page_config(layout="center", page_title=None, page_icon=":house:")
 
 st.write("""
  ## Shear Strength Prediction of Slender Concrete Beams Reinforced with FRP Rebar using Data-driven Machine Learning Algorithms
@@ -125,7 +125,7 @@ with col11:
                         
  st.table(df_pred)
 with col12:  
- st.line_chart(data=df_pred, x='ML Algorithm', y='Predicted Shear Strength (KN)', width=400, height=500, use_container_width=False)
+ st.line_chart(data=df_pred, x='ML Algorithm', y='Predicted Shear Strength (KN)', width=400, height=400, use_container_width=False)
 #st.write(p_lr,p_rr,p_lasr,p_svr,p_dt,p_rf,p_xb,p_ab,p_knn,p_ann)
 st.write('---')
 
