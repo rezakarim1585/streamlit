@@ -104,7 +104,7 @@ p_dt = dt_model.predict(df1)
 p_rf = rf_model.predict(df1)
 
 p_xb = xb_model.predict(df1)
-p_ab= abmodel.predict(df1)
+p_ab= ab_model.predict(df1)
 
 p_knn = knn_model.predict(df1)
 p_ann = ann_model.predict(df1)
