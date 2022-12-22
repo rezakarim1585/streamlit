@@ -57,10 +57,12 @@ def user_input_features():
     features = pd.DataFrame(data_log, index=[0])
     return features
 
-df1 = user_input_features()
-
-
-
+col1,col2=st.columns(1,1)
+with col1:
+   df1 = user_input_features()
+with col2: 
+ image = Image.open('pic1.png')
+ st.image(image, use_column_width=True)
 
 df['bw'] = np.log(df['bw'])
 df['d'] = np.log(df['d'])
