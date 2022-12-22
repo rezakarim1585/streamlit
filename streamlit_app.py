@@ -92,8 +92,8 @@ ann_model = pickle.load(open('ann_model.pkl','rb'))
 
 
 
-p_lr = lr_model.predict(df1)
-p_rr = rr_model.predict(df1)
+p_lr = float(lr_model.predict(df1))
+p_rr = float(rr_model.predict(df1))
 
 p_lasr = lasr_model.predict(df1)
 p_svr = svr_model.predict(df1)
@@ -109,7 +109,7 @@ p_ann = ann_model.predict(df1)
 
 #####
 
-p_lr = format(p_lr,'.3f')
+#p_lr = float(p_lr)
 
 ######
 
