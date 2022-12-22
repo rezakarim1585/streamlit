@@ -58,7 +58,7 @@ def user_input_features():
     features = pd.DataFrame(data_log, index=[0])
     return features
 
-col1,col2=st.columns([1,1])
+col1,col2=st.columns([2,1])
 with col1:
    df1 = user_input_features()
 with col2: 
@@ -120,10 +120,12 @@ pred = { 'ML Algorithm': ['Multilinear Regression (LR)','Ridge Regression (RR)',
        }
  
 df_pred = pd.DataFrame(pred)
- 
-st.write(df_pred)
-
-st.line_chart(data=df_pred, x='ML Algorithm', y='Predicted Shear Strength (KN)', width=0, height=0, use_container_width=True)
+col11,col12=st.columns([1,1])
+with col11:                   
+                        
+ st.write(df_pred)
+with col12:  
+ st.line_chart(data=df_pred, x='ML Algorithm', y='Predicted Shear Strength (KN)', width=0, height=0, use_container_width=True)
 #st.write(p_lr,p_rr,p_lasr,p_svr,p_dt,p_rf,p_xb,p_ab,p_knn,p_ann)
 st.write('---')
 
