@@ -133,8 +133,8 @@ fig, ax = plt.subplots()
 #####
 y_pos = range(len(ML_Algorithm)
 def addlabels(ML_Algorithm,Pred_SS):
-    for i in range(len(ML_Algorithm)):
-       plt.text(i,Pred_SS[i],Pred_SS (KN)[i])
+       for i in range(len(ML_Algorithm)):
+           plt.text(i,Pred_SS[i],Pred_SS[i])
         
  ax.bar(ML_Algorithm, Pred_SS, label= None, color= bar_colors)
  ax.set_ylabel('Predicted Shear Strength (KN)')
