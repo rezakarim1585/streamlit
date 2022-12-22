@@ -41,6 +41,7 @@ def user_input_features():
             'Ef (GPA)':Ef
            }
     df2 = pd.DataFrame(data, index=[0])
+    st.subheader('User Input parameters')
     st.table(df2)
     
     data_log = {'bw': np.log(bw),
@@ -56,7 +57,7 @@ def user_input_features():
     return features
 
 df1 = user_input_features()
-st.subheader('User Input parameters')
+
 
 
 
