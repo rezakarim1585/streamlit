@@ -44,7 +44,7 @@ def user_input_features():
     data_log = {'bw': np.log(bw),
             'd': np.log(d),
             #"fc": np.log(fc),
-            "fc": np.log(np.sqrt(fc)),
+            "fc": np.sqrt(np.log(fc)),
             'a_d': np.log(ad),
             'pf':pf,
             'Ef':np.log(Ef)
