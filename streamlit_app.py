@@ -43,7 +43,8 @@ def user_input_features():
 
     data_log = {'bw': np.log(bw),
             'd': np.log(d),
-            "fc": np.log(np.sqrt(fc)),
+            "fc": np.log(fc),
+            #"fc": np.log(np.sqrt(fc)),
             'a_d': np.log(ad),
             'pf':pf,
             'Ef':np.log(Ef)
@@ -89,9 +90,9 @@ xb_model1 = pickle.load(open('xb_model.pkl','rb'))
 #xb_model = XGBRegressor()
 #xb_model.fit(X1, Y)
 
-#prediction = rf_model.predict(df1)
+prediction = rf_model.predict(df1)
 
-#prediction2 = xb_model.predict(df1)
+prediction2 = xb_model.predict(df1)
 
 prediction3 = rf_model1.predict(df1)
 
