@@ -40,7 +40,7 @@ def user_input_features():
             'pf':pf,
             'Ef (GPA)':Ef
            }
-    df = pd.DataFrame(data, index=[0])
+    df2 = pd.DataFrame(data, index=[0])
     data_log = {'bw': np.log(bw),
             'd': np.log(d),
             "fc": np.log(fc),
@@ -55,7 +55,7 @@ def user_input_features():
 
 df1 = user_input_features()
 st.subheader('User Input parameters')
-st.write(df)
+st.write(df2)
 
 
 
