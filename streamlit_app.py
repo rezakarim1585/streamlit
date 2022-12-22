@@ -120,30 +120,6 @@ df_pred = pd.DataFrame(pred)
  
 st.write(df_pred)
 
-ML_Algorithm= df_pred['ML Algorithm']
-Pred_SS= df_pred['Predicted Shear Strength (KN)']
-#plt.rcParams["figure.figsize"] = [7, 4]
-    
-fig, ax = plt.subplots()
-#####
-y_pos = range(len(ML_Algorithm))
-def addlabels(ML_Algorithm,Pred_SS):
-    for i in range(len(ML_Algorithm)):
-        plt.text(i,Pred_SS[i],Pred_SS[i])
-        
-ax.bar(ML_Algorithm, Pred_SS, label= None, color= bar_colors)
-ax.set_ylabel('Predicted Shear Strength (KN)')
-ax.set_xlabel('ML Algorithm')
-ax.set_title('Shear Strength Pred- by ML')
-ax.legend(title=None)
-      #plt.xlim(-10, 10)
-plt.ylim(0, 200)
-addlabels(ML_Algorithm, Pred_SS)
-plt.xticks(y_pos, ML_Algorithm, rotation=30) 
-plt.show()
-st.pyplot(fig)
-fig.savefig('my_plot1.png')
-
 
 
 
@@ -153,6 +129,8 @@ ml = df_pred['ML Algorithm']
 ss = df_pred['Predicted Shear Strength (KN)']
 #bar_labels = ['red', 'blue', '_red', 'orange']
 bar_colors = ['tab:red', 'tab:blue', 'tab:pink', 'tab:orange', 'tab:green', 'tab:grey', 'tab:purple', 'tab:cyan']
+y_pos = range(len(ml))
+
 
 ax.bar(ml, ss, label= None, color= bar_colors)
 
@@ -166,6 +144,8 @@ ax.legend(title=None)
 plt.xticks(y_pos, Product, rotation=30) 
 plt.show()
 st.pyplot(fig)
+
+
 
 
 
