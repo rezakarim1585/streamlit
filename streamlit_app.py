@@ -132,7 +132,7 @@ plt.rcParams["figure.figsize"] = [7, 4]
 fig, ax = plt.subplots()
 
 ml = df_pred['ML Algorithm']
-ss = df4['Predicted Shear Strength (KN)']
+ss = df_pred['Predicted Shear Strength (KN)']
 #bar_labels = ['red', 'blue', '_red', 'orange']
 bar_colors = ['tab:red', 'tab:blue', 'tab:pink', 'tab:orange', 'tab:green', 'tab:grey', 'tab:purple', 'tab:cyan']
 
