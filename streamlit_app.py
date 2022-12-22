@@ -6,6 +6,7 @@ from xgboost import XGBRegressor
 import numpy as np
 import math
 import matplotlib.pyplot as plt
+from PIL import Image
 #from sklearn.neighbors import KNeighborsRegressor
 
 
