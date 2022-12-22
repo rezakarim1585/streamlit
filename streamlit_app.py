@@ -91,11 +91,6 @@ knn_model = pickle.load(open('knn_model.pkl', 'rb'))
 ann_model = pickle.load(open('ann_model.pkl','rb'))
 
 
-#rf_model = RandomForestRegressor()
-#rf_model.fit(X1, Y)
-# Apply Model to Make Prediction
-#xb_model = XGBRegressor()
-#xb_model.fit(X1, Y)
 
 p_lr = lr_model.predict(df1)
 p_rr = rr_model.predict(df1)
@@ -125,7 +120,7 @@ pred = { 'ML Algorithm': ['Multilinear Regression (LR)','Ridge Regression (RR)',
  
 df_pred = pd.DataFrame(pred)
  
-st.table(df_pred)
+st.write(df_pred)
 
 #plt.rcParams["figure.figsize"] = [7, 4]
     
