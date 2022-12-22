@@ -131,18 +131,18 @@ def addlabels(ML_Algorithm,Pred_SS):
     for i in range(len(ML_Algorithm)):
         plt.text(i,Pred_SS[i],Pred_SS[i])
         
- ax.bar(ML_Algorithm, Pred_SS, label= None, color= bar_colors)
- ax.set_ylabel('Predicted Shear Strength (KN)')
- ax.set_xlabel('ML Algorithm')
- ax.set_title('Shear Strength Pred- by ML')
- ax.legend(title=None)
+ax.bar(ML_Algorithm, Pred_SS, label= None, color= bar_colors)
+ax.set_ylabel('Predicted Shear Strength (KN)')
+ax.set_xlabel('ML Algorithm')
+ax.set_title('Shear Strength Pred- by ML')
+ax.legend(title=None)
       #plt.xlim(-10, 10)
- plt.ylim(0, 200)
- addlabels(ML_Algorithm, Pred_SS)
- plt.xticks(y_pos, ML_Algorithm, rotation=30) 
- plt.show()
- st.pyplot(fig)
- fig.savefig('my_plot1.png')
+plt.ylim(0, 200)
+addlabels(ML_Algorithm, Pred_SS)
+plt.xticks(y_pos, ML_Algorithm, rotation=30) 
+plt.show()
+st.pyplot(fig)
+fig.savefig('my_plot1.png')
 
 
 
