@@ -125,7 +125,7 @@ with col11:
                         
  st.write(df_pred)
 with col12:  
- st.line_chart(data=df_pred, x='ML Algorithm', y='Predicted Shear Strength (KN)', width=0, height=0, use_container_width=True)
+ st.line_chart(data=df_pred, x='ML Algorithm', y='Predicted Shear Strength (KN)', width=200, height=200, use_container_width=True)
 #st.write(p_lr,p_rr,p_lasr,p_svr,p_dt,p_rf,p_xb,p_ab,p_knn,p_ann)
 st.write('---')
 
