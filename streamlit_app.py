@@ -73,15 +73,19 @@ df=pd.DataFrame(df)
 X1 = df.loc[:, df.columns != 'Vexp']
 Y=df['Vexp']
 
-
-
 import pickle
 import math
 
-
-rf_model1 = pickle.load(open('rf_model.pkl', 'rb'))
-
-xb_model1 = pickle.load(open('xb_model.pkl','rb'))
+lr_model = pickle.load(open('lr_model.pkl', 'rb'))
+rr_model = pickle.load(open('rr_model.pkl','rb'))
+lasr_model = pickle.load(open('lasr_model.pkl', 'rb'))
+dt_model = pickle.load(open('dt_model.pkl','rb'))
+rf_model = pickle.load(open('rf_model.pkl', 'rb'))
+svr_model = pickle.load(open('svr_model.pkl','rb'))
+ab_model = pickle.load(open('ab_model.pkl', 'rb'))
+xb_model = pickle.load(open('xb_model.pkl','rb'))
+knn_model = pickle.load(open('knn_model.pkl', 'rb'))
+ann_model = pickle.load(open('ann_model.pkl','rb'))
 
 
 #rf_model = RandomForestRegressor()
@@ -90,19 +94,27 @@ xb_model1 = pickle.load(open('xb_model.pkl','rb'))
 #xb_model = XGBRegressor()
 #xb_model.fit(X1, Y)
 
-#prediction = rf_model.predict(df1)
+p_lr = lr_model.predict(df1)
+p_rr = rr_model.predict(df1)
 
-#prediction2 = xb_model.predict(df1)
+p_lasr = lasr_model.predict(df1)
+p_svr = svr_model.predict(df1)
 
-prediction3 = rf_model1.predict(df1)
+p_dt = dt_model.predict(df1)
+p_rf = rf_model.predict(df1)
+
+p_xb = xb_model.predict(df1)
+p_ab= abmodel.predict(df1)
+
+p_knn = knn_model.predict(df1)
+p_ann = ann_model.predict(df1)
 
 
-prediction4 = xb_model1.predict(df1)
 
 
 st.header('Prediction of Vexp')
-#st.write(prediction,prediction2)
-st.write(prediction3,prediction4)
+
+st.write(p_lr,p_rr,p_lasr,p_svr,p_dt,p_rf,p_xb,p_ab,p_knn,p_ann)
 st.write('---')
 
 
