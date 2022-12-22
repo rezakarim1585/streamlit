@@ -127,7 +127,7 @@ df_pred = pd.DataFrame(pred)
  
 st.table(df_pred)
 
-plt.rcParams["figure.figsize"] = [7, 4]
+#plt.rcParams["figure.figsize"] = [7, 4]
     
 fig, ax = plt.subplots()
 
@@ -144,7 +144,7 @@ ax.set_title('Shear Strength Prediction of FRP Reinforced Slender Concrete Beam 
 ax.legend(title=None)
     
     #plt.xlim(-10, 10)
-plt.ylim(0,200)
+#plt.ylim(0,200)
 plt.show()
 st.pyplot(fig)
 
