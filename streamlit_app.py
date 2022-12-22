@@ -129,28 +129,6 @@ st.write('---')
 
 
 
-######
-ml = df_pred['ML Algorithm']
-ss = df_pred['Predicted Shear Strength (KN)']
-#bar_labels = ['red', 'blue', '_red', 'orange']
-bar_colors = ['tab:red', 'tab:blue', 'tab:pink', 'tab:orange', 'tab:green', 'tab:grey', 'tab:purple', 'tab:cyan']
-y_pos = range(len(ml))
-
-
-ax.bar(ml, ss, label= None, color= bar_colors)
-
-ax.set_ylabel('Predicted Shear Strength (KN)')
-ax.set_xlabel('ML Algorithm')
-ax.set_title('Shear Strength Prediction of FRP Reinforced Slender Concrete Beam using ML')
-ax.legend(title=None)
-    
-    #plt.xlim(-10, 10)
-#plt.ylim(0,200)
-plt.xticks(y_pos, Product, rotation=30) 
-plt.show()
-st.pyplot(fig)
-
-
 
 
 
