@@ -37,7 +37,7 @@ def user_input_features():
     ad= st.sidebar.slider('Shear span-to-depth ratio, **a/d**', float(X.a_d.min()), float(X.a_d.max()), float(X.a_d.mean()))                   
     data = {'bw(mm)': bw,
             'd (mm)': d,
-            "fc' (MPa)": fc,
+            st.latex(r''' e^{i\pi} + 1 = 0 '''): fc,
             'a/d': ad,
             'ρf':pf,
             'Ef (GPA)':Ef
@@ -111,7 +111,7 @@ p_knn = float(knn_model.predict(df1))
 p_ann = float(ann_model.predict(df1))
 
 
-st.header('Prediction of Vexp')
+st.header('Prediction of V')
 
 
 
