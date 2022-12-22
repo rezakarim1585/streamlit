@@ -37,7 +37,7 @@ def user_input_features():
             'd (mm)': d,
             "fc' (MPa)": fc,
             'a/d': ad,
-            'pf':pf,
+            'ρf':pf,
             'Ef (GPA)':Ef
            }
     df2 = pd.DataFrame(data, index=[0])
