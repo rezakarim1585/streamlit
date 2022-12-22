@@ -120,7 +120,7 @@ pred = { 'ML Algorithm': ['Multilinear Regression (LR)','Ridge Regression (RR)',
        }
  
 df_pred = pd.DataFrame(pred)
-col11,col12=st.columns([1,2])
+col11,col12=st.columns([2,1])
 with col11:                   
                         
  st.table(df_pred)
