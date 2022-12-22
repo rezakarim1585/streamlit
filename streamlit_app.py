@@ -78,7 +78,7 @@ import pickle
 import math
 
 
-#ab_model = pickle.load(open('ab_model.pkl', 'rb'))
+ab_model = pickle.load(open('ab_model.pkl', 'rb'))
 
 svr_model = pickle.load(open('svr_model.pkl','rb'))
 
@@ -96,12 +96,12 @@ svr_model = pickle.load(open('svr_model.pkl','rb'))
 prediction3 = svr_model.predict(df1)
 
 
-#prediction4 = ab_model.predict(df1)
+prediction4 = ab_model.predict(df1)
 
 
 st.header('Prediction of Vexp')
-#st.write(prediction3,prediction4)
-st.write(prediction3)
+st.write(prediction3,prediction4)
+
 st.write('---')
 
 
