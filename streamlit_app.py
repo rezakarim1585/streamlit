@@ -107,11 +107,6 @@ p_ab= float(ab_model.predict(df1))
 p_knn = float(knn_model.predict(df1))
 p_ann = float(ann_model.predict(df1))
 
-#####
-
-#p_lr = float(p_lr)
-
-######
 
 st.header('Prediction of Vexp')
 
@@ -131,10 +126,10 @@ Pred_SS= df_pred['Predicted Shear Strength (KN)']
     
 fig, ax = plt.subplots()
 #####
-y_pos = range(len(ML_Algorithm)
+y_pos = range(len(ML_Algorithm))
 def addlabels(ML_Algorithm,Pred_SS):
-       for i in range(len(ML_Algorithm)):
-           plt.text(i,Pred_SS[i],Pred_SS[i])
+    for i in range(len(ML_Algorithm)):
+        plt.text(i,Pred_SS[i],Pred_SS[i])
         
  ax.bar(ML_Algorithm, Pred_SS, label= None, color= bar_colors)
  ax.set_ylabel('Predicted Shear Strength (KN)')
