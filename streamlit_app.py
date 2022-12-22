@@ -10,7 +10,7 @@ from PIL import Image
 #from sklearn.neighbors import KNeighborsRegressor
 
 
-st.set_page_config(layout="center", page_title=None, page_icon=":house:")
+st.set_page_config(layout="centered", page_title=None, page_icon=":rectangle:")
 
 st.write("""
  ## Shear Strength Prediction of Slender Concrete Beams Reinforced with FRP Rebar using Data-driven Machine Learning Algorithms
