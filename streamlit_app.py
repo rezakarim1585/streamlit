@@ -128,7 +128,30 @@ st.write(df_pred)
 #plt.rcParams["figure.figsize"] = [7, 4]
     
 fig, ax = plt.subplots()
+#####
+y_pos = range(len(ML Algorithm)
+def addlabels(ML Algorithm,Predicted Shear Strength (KN)):
+    for i in range(len(ML Algorithm)):
+       plt.text(i,Predicted Shear Strength (KN)[i],Predicted Shear Strength (KN)[i])
+        
+        ax.bar(Product, Predicted Shear Strength (KN), label= None, color= bar_colors)
+        ax.set_ylabel('Predicted Shear Strength (KN)')
+        ax.set_xlabel('ML Algorithm')
+        ax.set_title('Current Progress of the Project- DAY %d'%x)
+        ax.legend(title=None)
+        #plt.xlim(-10, 10)
+        plt.ylim(0, 100)
+        addlabels(ML Algorithm, Predicted Shear Strength (KN)')
+        plt.xticks(y_pos, ML Algorithm, rotation=30) 
+        plt.show()
+        st.pyplot(fig)
+        fig.savefig('my_plot1.png')
 
+
+
+
+
+######
 ml = df_pred['ML Algorithm']
 ss = df_pred['Predicted Shear Strength (KN)']
 #bar_labels = ['red', 'blue', '_red', 'orange']
@@ -143,6 +166,7 @@ ax.legend(title=None)
     
     #plt.xlim(-10, 10)
 #plt.ylim(0,200)
+plt.xticks(y_pos, Product, rotation=30) 
 plt.show()
 st.pyplot(fig)
 
