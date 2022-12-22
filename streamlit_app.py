@@ -122,6 +122,7 @@ pred = { 'ML Algorithm': ['Multilinear Regression (LR)','Ridge Regression (RR)',
                           'Decision Tree (DT)','Random Forest (RF)','K-Nearest Neighbour (KNN)',"Arti-Neural Network (ANN)",
                           'Adaboost (AB)','Extreme Grad- Boost (XB)'],
          'Predicted Shear Strength (KN)': [p_lr, p_rr, p_lasr, p_svr,p_dt,p_rf, p_knn,p_ann, p_ab,p_xb]
+       }
  
 df_pred = pd.DataFrame(pred, index=[0])
  
