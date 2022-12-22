@@ -125,6 +125,8 @@ df_pred = pd.DataFrame(pred)
  
 st.write(df_pred)
 
+ML Algorithm= df_pred['ML Algorithm']
+Predicted Shear Strength (KN)= df_pred['Predicted Shear Strength (KN)']
 #plt.rcParams["figure.figsize"] = [7, 4]
     
 fig, ax = plt.subplots()
