@@ -144,7 +144,7 @@ ax.set_title('Shear Strength Prediction of FRP Reinforced Slender Concrete Beam 
 ax.legend(title=None)
     
     #plt.xlim(-10, 10)
-#plt.ylim(0, 300)
+plt.ylim(0,200)
 plt.show()
 st.pyplot(fig)
 
