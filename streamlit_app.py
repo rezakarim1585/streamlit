@@ -109,7 +109,7 @@ p_ann = ann_model.predict(df1)
 
 #####
 
-p_lr = float(p_lr)
+p_lr = format(p_lr,'.3f')
 
 ######
 
